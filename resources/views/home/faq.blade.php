@@ -51,7 +51,7 @@
                     </div> <!-- end accordion -->
 
 
-                    <h2 class="mb-20 mt-80"><small>Pertanyaan pembayaran</small></h2>
+                    <h2 class="mb-20 mt-80"><small>Pertanyaan Pembayaran</small></h2>
 
                     <div class="panel-group accordion mb-50" id="accordion-2">
                         <div class="panel">
