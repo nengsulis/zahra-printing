@@ -9,7 +9,7 @@
             <div class="row">
 
                 <div class="col-sm-9">
-                    <h2 class="mb-20"><small>pertanyaan pengiriman</small></h2>
+                    <h2 class="mb-20"><small>Pertanyaan pengiriman</small></h2>
 
                     <div class="panel-group accordion mb-50" id="accordion-1">
                         <div class="panel">
