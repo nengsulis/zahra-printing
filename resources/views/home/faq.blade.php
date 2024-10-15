@@ -21,11 +21,11 @@
                             </div>
                             <div id="collapse-1" class="panel-collapse collapse in">
                                 <div class="panel-body">
-                                    Tema kami adalah template e-commerce yang sangat elegan dan bersih dengan kemungkinan
-                                    yang tak terbatas.
-                                    Menciptakan situs web yang luar biasa. Tema Canna adalah template e-commerce yang sangat
-                                    elegan
-                                    dan bersih dengan kemungkinan yang tak terbatas.
+                                    Untuk melacak pengiriman anda, langkah pertama adalah menggunakan nomor resi yang telah tersedia. Nomor resi dapat dilihat di detail pesanan setelah proses pengemasan selesai.
+                                    Setelah mendapatkan nomor resi, anda dapat menggunakan aplikasi pihak ketiga atau situs web resmi jasa pengiriman untuk melakukan pelacakan.
+                                    Dengan cara ini, anda dapat memantau secara berkala informasi pengiriman pesanan anda.
+
+                                    jika anda mengalami kesulitan, jangan ragu untuk menghubungi kami. Terima Kasih 
                                 </div>
                             </div>
                         </div>
@@ -39,16 +39,10 @@
                             </div>
                             <div id="collapse-2" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Kita memiliki dua pikiran di dalam diri kita. Sejauh ini saya hanya menulis tentang
-                                    pikiran sadar.
-                                    Saya sekarang ingin memperkenalkan Anda kepada pikiran kedua Anda, yang tersembunyi dan
-                                    misterius,
-                                    yaitu pikiran bawah sadar. Pikiran bawah sadar kita mengandung kekuatan dan kompleksitas
-                                    yang begitu besar sehingga benar-benar mengagumkan. Dan akhirnya, pikiran bawah sadar
-                                    adalah
-                                    mekanisme di mana impuls pemikiran yang diulang secara teratur dengan perasaan dan emosi
-                                    dipercepat dan diisi. Pikiran bawah sadar kita mengandung kekuatan dan kompleksitas
-                                    yang begitu besar sehingga benar-benar mengagumkan.
+                                    Nomor pelacakan atau resi pengiriman akan tersedia setelah pesanan anda melewati tahap pengemasan.Proses ini memastikan bahwa barang anda siap untuk dikirim.
+                                    Setelah pesanan dikemas, admin akan memasukkan nomor resi yang terkait dengan pengiriman. Anda dapat menemukan nomor resi tersebut dengan mengakses detail pesanan dibagian riwayat pesanan anda.
+                                    Pastikan anda memeriksa secara berkala status pengiriman barang anda. Jika ada pertanyaan lebih lanjut, bisa menghubungi admin di kontak informasi.
+                                    Terima Kasih.
                                 </div>
                             </div>
                         </div>
@@ -69,11 +63,8 @@
                             </div>
                             <div id="collapse-4" class="panel-collapse collapse in">
                                 <div class="panel-body">
-                                    Tema kami adalah template e-commerce yang sangat elegan dan bersih dengan kemungkinan
-                                    yang tak terbatas.
-                                    Menciptakan situs web yang luar biasa. Tema Canna adalah template e-commerce yang sangat
-                                    elegan
-                                    dan bersih dengan kemungkinan yang tak terbatas.
+                                    Toko kami menerima pembayaran melalui transfer bank. Anda dapat menggunakan Bank BCA atau Bank BRI untuk menyelesaikan transaksi. 
+                                    Informasi detail rekening akan disediakan setelah Anda menyelesaikan pemesanan.
                                 </div>
                             </div>
                         </div>
