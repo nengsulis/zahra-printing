@@ -15,7 +15,7 @@
                         <div class="panel">
                             <div class="panel-heading">
                                 <a data-toggle="collapse" data-parent="#accordion-1" href="#collapse-1"
-                                    class="minus">bagaimana cara
+                                    class="minus">Bagaimana cara
                                     melacak pengiriman saya?<span>&nbsp;</span>
                                 </a>
                             </div>
