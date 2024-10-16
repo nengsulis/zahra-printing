@@ -96,3 +96,4 @@ Route::post('/payments', [HomeController::class, 'payments']);
 Route::post('/bayar', [HomeController::class, 'bayar']);
 Route::post('/payment_charge', [HomeController::class, 'payment_charge']);
 Route::post('/pesanan_selesai/{order}', [HomeController::class, 'pesanan_selesai']);
+
