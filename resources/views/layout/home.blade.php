@@ -225,11 +225,11 @@
                                     <h5 class="widget-title bottom-line left-align grey">Zahra Printing</h5>
                                     <p class="mb-30">Zahra Printing.</p>
                                     <div class="footer-socials">
-                                        <div class="social-icons nobase">
+                                        <!-- <div class="social-icons nobase">
                                             <a href="/front/#"><i class="fa fa-twitter"></i></a>
                                             <a href="/front/#"><i class="fa fa-facebook"></i></a>
                                             <a href="/front/#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div> <!-- end about us -->

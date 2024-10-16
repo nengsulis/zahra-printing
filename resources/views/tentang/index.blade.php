@@ -43,8 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Telepon</label>
-                            <input type="text" class="form-control" name="telepon" placeholder="Telepon" required
-                                value="{{ $about->telepon }}">
+                            <textarea name="telepon" placeholder="Telepon" class="form-control" id="" cols="30" rows="10" required>{{ $about->telepon }}</textarea>
                         </div>
                         {{-- <div class="form-group">
                         <label for="">Atas Nama</label>

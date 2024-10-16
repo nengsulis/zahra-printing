@@ -83,10 +83,10 @@
                             <span class="amount">Rp. {{ number_format($product->harga) }}</span>
                         </ins>
                     </span>
-                    <p class="short-description">{{ $product->deskripsi }}</p>
+                    <!-- <p class="short-description">{{ $product->deskripsi }}</p> -->
 
                     <div class="size-options clearfix">
-                        <span>Ukuran : </span>
+                        <span>Pilihan : </span>
                         @php
                             $ukurans = explode(',', $product->ukuran);
                         @endphp
@@ -106,13 +106,13 @@
 
 
                         <span class="form-text mb-2">
-                            Jika anda tidak mempunyai desain, kami akan membantu anda untuk membantunya!
+                            Jika anda tidak mempunyai desain, kami akan membantu anda untuk membuatnya!
                         </span>
 
                         <div class="form-check mb-3">
                             <input class="form-check-input" name="need" type="checkbox" value="0" id="need">
                             <label class="form-check-label" for="need">
-                                Saya Butuh Desain (Jasa Desain Rp.50.000)
+                                Saya Butuh Desain (Jasa Desain Rp.60.000)
                             </label>
                         </div>
 
@@ -146,10 +146,10 @@
 
 
                     <div class="product_meta">
-                        <span class="sku">SKU: <a href="#">{{ $product->sku }}</a></span>
+                        <!-- <span class="sku">SKU: <a href="#">{{ $product->sku }}</a></span> -->
                         <span class="brand_as">Kategori: <a
                                 href="#">{{ $product->category->nama_kategori }}</a></span>
-                        <span class="posted_in">Tags: <a href="#">{{ $product->tags }}</a></span>
+                        <!-- <span class="posted_in">Tags: <a href="#">{{ $product->tags }}</a></span> -->
                     </div>
 
                     <!-- Accordion -->
@@ -167,7 +167,7 @@
                             </div>
                         </div>
 
-                        <div class="panel">
+                        <!-- <div class="panel">
                             <div class="panel-heading">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
                                     class="plus">Informasi<span>&nbsp;</span>
@@ -193,10 +193,10 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="socials-share clearfix">
+                    <!-- <div class="socials-share clearfix">
                         <span>Share:</span>
                         <div class="social-icons nobase">
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -204,7 +204,7 @@
                             <a href="#"><i class="fa fa-google"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div> <!-- end col product description -->
             </div> <!-- end row -->
 

@@ -59,7 +59,7 @@ class HomeController extends Controller
 
         // Jika membutuhkan desain total ditambah 50000
         if ($request->need_desain == 1) {
-            $total = $request->total + 50000;
+            $total = $request->total + 60000;
         }
         if ($request->need_desain == 0) {
             $total = $request->total;

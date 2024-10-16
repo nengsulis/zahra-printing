@@ -15,8 +15,10 @@
                 <div class="col-md-3 col-md-offset-1 col-sm-5 mb-40">
                     <div class="contact-item">
                         <h6>Address</h6>
-                        <address>{{ $about->judul_website }}<br>
-                            {{ $about->alamat }}</address>
+                        <address>
+                            {{ $about->judul_website }}<br>
+                            {!! nl2br(e($about->alamat)) !!}
+                        </address>
                     </div> <!-- end address -->
 
                     <div class="contact-item">
@@ -26,7 +28,13 @@
                                 <i class="fa fa-envelope"></i><a href="mailto:{{ $about->email }}">{{ $about->email }}</a>
                             </li>
                             <li>
-                                <i class="fa fa-phone"></i><span>{{ $about->telepon }}</span>
+                                <i class="fa fa-phone"></i>
+                                @if($about->telepon)
+                                    @foreach(explode("\n", $about->telepon) as $telepon)
+                                        <span>{{ $telepon }}</span><br>
+                                    @endforeach
+                                @endif
+                                <!-- <i class="fa fa-phone"></i><span>{{ $about->telepon }}</span> -->
                             </li>
                         </ul>
                     </div> <!-- end information -->
