@@ -162,7 +162,7 @@
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in">
                                 <div class="panel-body">
-                                    {{ $product->deskripsi }}
+                                    {!! nl2br(e($product->deskripsi)) !!}
                                 </div>
                             </div>
                         </div>

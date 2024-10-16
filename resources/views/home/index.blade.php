@@ -20,7 +20,7 @@
     </section> <!-- end hero slider -->
 
     <!-- Promo Banners -->
-    <section class="section-wrap promo-banners pb-30">
+    <!-- <section class="section-wrap promo-banners pb-30">
         <div class="container">
             <div class="row">
 
@@ -38,7 +38,9 @@
                 @endforeach
             </div>
         </div>
-    </section> <!-- end promo banners -->
+    </section> end promo banners -->
+
+
 
 
     <!-- Trendy Products -->
@@ -47,9 +49,12 @@
 
             <div class="row heading-row">
                 <div class="col-md-12 text-center">
-                    <h2 class="heading bottom-line">
+                    <h2 class="heading bottom-line" style="margin-top: 40px; margin-bottom: 30px; font-size: 32px; font-weight: 600; letter-spacing: 2px;">
                         Product Design
                     </h2>
+                    <i class="fa fa-star" style="font-size: 24px; color: #f39c12; margin-right: 5px;"></i>
+                    <i class="fa fa-star" style="font-size: 24px; color: #f39c12; margin-right: 5px;"></i>
+                    <i class="fa fa-star" style="font-size: 24px; color: #f39c12;"></i>
                 </div>
             </div>
 

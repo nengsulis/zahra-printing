@@ -20,6 +20,8 @@
                             <th>Subkategori</th>
                             <th>Nama Produk</th>
                             <th>Harga</th>
+                            <th>Berat</th>
+                            <th>Tags</th>
                             <th>Sku</th>
                             <th>Ukuran</th>
                             <th>Deskripsi</th>
@@ -132,6 +134,8 @@
                                     <td>${val.subcategory.nama_subkategori}</td>
                                     <td>${val.nama_produk}</td>
                                     <td>${val.harga}</td>
+                                    <td>${val.berat}</td>
+                                    <td>${val.tags}</td>
                                     <td>${val.sku}</td>
                                     <td>${val.ukuran}</td>
                                     <td>${val.deskripsi}</td>

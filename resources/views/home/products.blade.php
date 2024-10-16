@@ -14,12 +14,12 @@
                     <a class="grid grid-active" id="grid"></a>
                     <a class="list" id="list"></a>
                 </div>
-                <div class="filter-show hidden-xs">
+                <!-- <div class="filter-show hidden-xs">
                     <span>Show:</span>
                     <a href="#" class="active">12</a>
                     <a href="#">24</a>
                     <a href="#">semua</a>
-                </div>
+                </div> -->
                 <form class="ecommerce-ordering">
                     <select>
                         <option value="default-sorting">Urutan Standar</option>
@@ -81,7 +81,7 @@
 
                                         <span class="ukuran" style="width: 100%; display: block">
                                             <ins style="float: right;">
-                                                <span class="amount">x {{ $lebarPertama }}</span>
+                                                <!-- <span class="amount">x {{ $lebarPertama }}</span> -->
                                             </ins>
                                         </span>
 
@@ -93,7 +93,7 @@
 
                     <!-- Pagination -->
                     <div class="pagination-wrap clearfix">
-                        <p class="result-count">Menampilkan: 12 dari 80 hasil</p>
+                        <p class="result-count">Menampilkan: </p>
                         <nav class="pagination right clearfix">
                             <a href="#"><i class="fa fa-angle-left"></i></a>
                             <span class="page-numbers current">1</span>

@@ -29,6 +29,7 @@ class ProductController extends Controller
     {
         $products = Product::with('category', 'subcategory')->get();
         return response()->json(['data' => $products]);
+
     }
 
     public function store(Request $request)
