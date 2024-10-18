@@ -39,7 +39,7 @@
                                             <td class="product-name">
                                                 <a href="#">{{ $cart->product->nama_produk }}</a>
                                                 <ul>
-                                                    <li>Size: {{ $cart->ukuran }}</li>
+                                                    <li>Pilihan/Size: {{ $cart->ukuran }}</li>
                                                     <li>Desain:
                                                         @if ($cart->file != null)
                                                             <span>Desain sudah terupload</span>
