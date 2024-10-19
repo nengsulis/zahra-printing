@@ -10,6 +10,13 @@
                 Data tentang
             </h4>
         </div>
+            {{-- Flash Message --}}
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+            {{-- End Flash Message --}}
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">

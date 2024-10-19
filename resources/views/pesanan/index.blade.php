@@ -237,6 +237,7 @@
                         "Authorization": 'Bearer ' + token
                     },
                     success: function(data) {
+                        alert('Pesanan Dikonfirmasi')
                         location.reload()
                     }
                 })

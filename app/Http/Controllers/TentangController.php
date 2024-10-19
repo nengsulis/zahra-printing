@@ -31,6 +31,6 @@ class TentangController extends Controller
 
         $about->update($input);
 
-        return redirect('/tentang');
+        return redirect('/tentang')->with('success', 'Data berhasil diubah!');;
     }
 }

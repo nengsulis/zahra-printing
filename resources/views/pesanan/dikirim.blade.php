@@ -93,6 +93,7 @@
                         "Authorization": 'Bearer ' + token
                     },
                     success: function(data) {
+                        alert('Pesanan Diterima')
                         location.reload()
                     }
                 })

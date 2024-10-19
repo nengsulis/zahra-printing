@@ -230,7 +230,6 @@
             });
 
             // Edit product
-            // Edit product
             $(document).on('click', '.modal-ubah', function() {
                 const id = $(this).data('id');
                 $('#modal-form').modal('show');
