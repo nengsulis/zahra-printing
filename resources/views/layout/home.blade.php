@@ -223,7 +223,9 @@
                             <div class="col-md-3 col-sm-12 col-xs-12">
                                 <div class="widget footer-about-us">
                                     <h5 class="widget-title bottom-line left-align grey">Zahra Printing</h5>
-                                    <p class="mb-30">Zahra Printing.</p>
+                                    <p class="mb-30">Premium Quality Products</p>
+                                    <p class="mb-30">Excelent Service</p>
+                                    <p class="mb-30">Express Shippping</p>
                                     <div class="footer-socials">
                                         <!-- <div class="social-icons nobase">
                                             <a href="/front/#"><i class="fa fa-twitter"></i></a>

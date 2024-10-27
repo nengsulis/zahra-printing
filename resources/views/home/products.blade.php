@@ -20,7 +20,7 @@
                     <a href="#">24</a>
                     <a href="#">semua</a>
                 </div> -->
-                <form class="ecommerce-ordering">
+                <!-- < class="ecommerce-ordering">
                     <select>
                         <option value="default-sorting">Urutan Standar</option>
                         <option value="price-low-to-high">Harga: tinggi ke randah</option>
@@ -29,7 +29,7 @@
                         <option value="date">By terbaru</option>
                         <option value="rating">By penilaian</option>
                     </select>
-                </form>
+                </form> -->
             </div>
 
             <div class="row">
@@ -92,7 +92,7 @@
                     </div> <!-- end grid mode -->
 
                     <!-- Pagination -->
-                    <div class="pagination-wrap clearfix">
+                    <!-- <div class="pagination-wrap clearfix">
                         <p class="result-count">Menampilkan: </p>
                         <nav class="pagination right clearfix">
                             <a href="#"><i class="fa fa-angle-left"></i></a>
@@ -102,8 +102,7 @@
                             <a href="#">4</a>
                             <a href="#"><i class="fa fa-angle-right"></i></a>
                         </nav>
-                    </div>
-
+                    </div> -->
                 </div> <!-- end col -->
 
             </div> <!-- end row -->
