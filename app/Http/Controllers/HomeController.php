@@ -31,7 +31,7 @@ class HomeController extends Controller
 
 
         // Ambil subkategori yang memiliki kategori dengan ID 1
-        $subcategories = Subcategory::where('id_kategori', 1)->with('products')->get();
+        $subcategories = Subcategory::where('id_kategori', 1)->with('products')->take(4)->get();
 
         $products = [];
         foreach ($subcategories as $subcategory) {
