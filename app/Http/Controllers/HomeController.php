@@ -132,8 +132,10 @@ class HomeController extends Controller
         $carts = Cart::where('id_member', Auth::guard('webmember')->user()->id)->where('is_checkout', 0)->get();
 
         $cart_total = Cart::where('id_member', Auth::guard('webmember')->user()->id)->where('is_checkout', 0)->sum('total');
-
-        $berat_total = Cart::where('id_member', Auth::guard('webmember')->user()->id)->where('is_checkout', 0)->join('products', 'carts.id_produk', '=', 'products.id')->sum('products.berat');
+        $berat_total = Cart::where('id_member', Auth::guard('webmember')->user()->id)
+            ->where('is_checkout', 0)
+            ->join('products', 'carts.id_produk', '=', 'products.id')
+            ->sum(DB::raw('products.berat * carts.jumlah'));
 
         return view('home.cart', compact('carts', 'provinsi', 'cart_total', 'berat_total'));
     }

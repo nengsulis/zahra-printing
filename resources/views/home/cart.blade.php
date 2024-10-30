@@ -99,7 +99,7 @@
                         <div class="row row-10">
                             <div class="col-sm-12">
                                 <p class="form-row form-row-wide">
-                                    <label for="detail_alamat">Berat (Kg)</label>
+                                    <label for="detail_alamat">Berat (g)</label>
                                     <input type="text" class="input-text berat" placeholder="Berat" name="berat"
                                         value="{{ $berat_total }}" id="berat" disabled>
                                     <input type="hidden" class="input-text berat" placeholder="Berat" name="berat"
