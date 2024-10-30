@@ -41,9 +41,6 @@ class HomeController extends Controller
                 $products[] = $product; // Tambahkan produk ke dalam array
             }
         }
-
-        // Jika ingin membatasi jumlah produk yang ditampilkan, bisa menggunakan array_slice
-        $products = array_slice($products, 0, 1); // Ambil 4 produk pertama
         return view('home.index', compact('sliders', 'categories', 'products'));
     }
     public function products($id_subcategory)
