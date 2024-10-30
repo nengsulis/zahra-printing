@@ -69,7 +69,7 @@ class HomeController extends Controller
             $filePath = $file->store('uploads', 'public'); // Simpan file ke dalam folder public/uploads
         }
 
-        // Jika membutuhkan desain total ditambah 50000
+        // Jika membutuhkan desain total ditambah 60000
         if ($request->need_desain == 1) {
             $total = $request->total + 60000;
         }
