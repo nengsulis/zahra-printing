@@ -2,24 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Storage;
+use DB;
 
-use App\Http\Controllers\Controller;
-use App\Models\About;
+use Auth;
 use App\Models\Cart;
-use App\Models\Category;
-use App\Models\Gateway;
+use App\Models\About;
 use App\Models\Order;
-use App\Models\OrderDetail;
+use App\Models\Slider;
+use App\Models\Gateway;
 use App\Models\Payment;
 use App\Models\Product;
-use App\Models\Slider;
+use App\Models\Category;
 use App\Models\Testimoni;
-use Illuminate\Support\Facades\Log;
-use Auth;
-use DB;
+use App\Models\OrderDetail;
+use App\Models\Subcategory;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -27,8 +28,22 @@ class HomeController extends Controller
     {
         $sliders = Slider::all();
         $categories = Category::all();
-        // $testimonies = Testimoni::all();
-        $products = Product::skip(0)->take(4)->get();
+
+
+        // Ambil subkategori yang memiliki kategori dengan ID 1
+        $subcategories = Subcategory::where('id_kategori', 1)->with('products')->get();
+
+        $products = [];
+        foreach ($subcategories as $subcategory) {
+            // Ambil satu produk dari setiap subkategori
+            $product = Product::where('id_subkategori', $subcategory->id)->first(); // Ganti 'products' dengan query
+            if ($product) {
+                $products[] = $product; // Tambahkan produk ke dalam array
+            }
+        }
+
+        // Jika ingin membatasi jumlah produk yang ditampilkan, bisa menggunakan array_slice
+        $products = array_slice($products, 0, 1); // Ambil 4 produk pertama
         return view('home.index', compact('sliders', 'categories', 'products'));
     }
     public function products($id_subcategory)
