@@ -55,10 +55,8 @@
 
                                 <div id="payment" class="ecommerce-checkout-payment">
                                     <h2 class="heading uppercase bottom-line full-grey">Payment Method</h2>
-                                    <p>Lakukan pembayaran Anda langsung ke rekening bank kami. Silakan gunakan
-                                        ID Pesanan Anda
-                                        sebagai referensi pembayaran. Pesanan Anda tidak akan diproses sampai
-                                        dana tersedia di akun kami.</p>
+                                    <p>Lakukan pembayaran Anda langsung ke rekening bank kami. Silakan melakukan pembayaran sesuai dengan jumlah nominal order anda. 
+                                        Pesanan Anda tidak akan diproses sampai dana tersedia di akun kami.</p>
                                     <ul class="payment_methods methods">
                                         @foreach ($gateways as $gateway)
                                             <li class="payment_method_bacs">
