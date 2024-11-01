@@ -45,7 +45,7 @@
                                                             <span>Desain sudah terupload</span>
                                                         @elseif ($cart->is_need_design == 1)
                                                             <span style="color: red">Saya ingin request desain (Jasa Desain
-                                                                Rp.50.000)</span>
+                                                                Rp.60.000)</span>
                                                         @else
                                                             <span>Desain belum Terupload</span>
                                                         @endif
