@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
+    // loginAadmin
     public function index()
     {
         return view('auth.login');    
@@ -47,6 +48,7 @@ class AuthController extends Controller
         ]);
     }
 
+    // registermember
     public function register(Request $request)
     {
         $validator = \Illuminate\Support\Facades\Validator::make($request->all(), [
@@ -78,6 +80,7 @@ class AuthController extends Controller
         ]);
     }
 
+    // loginmember
     public function login_member()
     {
         return view('auth.login_member');

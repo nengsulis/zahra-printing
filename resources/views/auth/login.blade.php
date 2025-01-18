@@ -59,7 +59,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Selamat Datang di Dashboard Aplikasi
                                             Manajemen Percetakan</h1>
-                                        <p class="mb-4">Silakan Masuk terlebih dahulu.</p>
+                                        <p class="mb-4">Silakan Masuk Terlebih Dahulu</p>
                                     </div>
                                     @if ($errors->any())
                                         <div class="alert alert-danger">

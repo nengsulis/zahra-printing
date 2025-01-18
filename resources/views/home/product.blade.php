@@ -44,7 +44,7 @@
                         </div>
                     </div> <!-- end gallery main -->
 
-                    <div class="gallery-thumbs">
+                    <!-- <div class="gallery-thumbs">
                         <div class="gallery-cell">
                             <img src="/uploads/{{ $product->gambar }}" alt="" />
                         </div>
@@ -60,7 +60,7 @@
                         <div class="gallery-cell">
                             <img src="/uploads/{{ $product->gambar }}" alt="" />
                         </div>
-                    </div> <!-- end gallery thumbs -->
+                    </div> end gallery thumbs -->
 
                 </div> <!-- end col img slider -->
 

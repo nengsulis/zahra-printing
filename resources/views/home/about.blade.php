@@ -7,10 +7,10 @@
     <section class="section-wrap intro pb-0">
         <div class="container">
             <div class="row">
-            <div class="col-sm-8 mb-50">
-                <h2 class="intro-heading">About Our Shop</h2>
-                <p style="white-space: pre-line;">{{ $about->deskripsi }}</p>
-            </div>
+                <div class="col-sm-8 mb-50">
+                    <h2 class="intro-heading">About Our Shop</h2>
+                    <p style="white-space: pre-line;">{{ $about->deskripsi }}</p>
+                </div>
 
                 <div class="col-md-3 col-md-offset-1 col-sm-5 mb-40">
                     <div class="contact-item">
