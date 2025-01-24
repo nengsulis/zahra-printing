@@ -56,4 +56,5 @@ Route::group([
     Route::post('pesanan/update_charge/{order}', [OrderController::class, 'update_charge']);
     Route::post('pesanan/update_resi/{order}', [OrderController::class, 'update_resi']);
     Route::get('reports', [ReportController::class, 'invoice_reports']);
+    Route::get('/product-reports', [ReportController::class, 'getReportData']);
 });

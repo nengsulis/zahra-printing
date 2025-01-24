@@ -105,6 +105,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/report/product">
+                    <i class="fas fa-fw fa-book"></i>
+                    <span>Report Produk</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/tentang">
                     <i class="fas fa-fw fa-globe"></i>
                     <span>Tentang</span>

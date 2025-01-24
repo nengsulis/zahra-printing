@@ -21,4 +21,9 @@ class OrderDetail extends Model
     {
         return $this->belongsTo(Product::class, 'id_produk', 'id');
     }
+
+    public function scopeFilterDate($query, $dari, $sampai)
+    {
+        return $query->whereBetween('order_details.created_at', [$dari, $sampai]);
+    }
 }

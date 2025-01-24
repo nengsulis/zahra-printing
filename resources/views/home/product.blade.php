@@ -45,22 +45,22 @@
                     </div> <!-- end gallery main -->
 
                     <!-- <div class="gallery-thumbs">
-                        <div class="gallery-cell">
-                            <img src="/uploads/{{ $product->gambar }}" alt="" />
-                        </div>
-                        <div class="gallery-cell">
-                            <img src="/uploads/{{ $product->gambar }}" alt="" />
-                        </div>
-                        <div class="gallery-cell">
-                            <img src="/uploads/{{ $product->gambar }}" alt="" />
-                        </div>
-                        <div class="gallery-cell">
-                            <img src="/uploads/{{ $product->gambar }}" alt="" />
-                        </div>
-                        <div class="gallery-cell">
-                            <img src="/uploads/{{ $product->gambar }}" alt="" />
-                        </div>
-                    </div> end gallery thumbs -->
+                                                    <div class="gallery-cell">
+                                                        <img src="/uploads/{{ $product->gambar }}" alt="" />
+                                                    </div>
+                                                    <div class="gallery-cell">
+                                                        <img src="/uploads/{{ $product->gambar }}" alt="" />
+                                                    </div>
+                                                    <div class="gallery-cell">
+                                                        <img src="/uploads/{{ $product->gambar }}" alt="" />
+                                                    </div>
+                                                    <div class="gallery-cell">
+                                                        <img src="/uploads/{{ $product->gambar }}" alt="" />
+                                                    </div>
+                                                    <div class="gallery-cell">
+                                                        <img src="/uploads/{{ $product->gambar }}" alt="" />
+                                                    </div>
+                                                </div> end gallery thumbs -->
 
                 </div> <!-- end col img slider -->
 
@@ -112,9 +112,13 @@
                         <div class="form-check mb-3">
                             <input class="form-check-input" name="need" type="checkbox" value="0" id="need">
                             <label class="form-check-label" for="need">
-                                Saya Butuh Desain (Jasa Desain Rp.60.000)
+                                Saya Butuh Desain (Jasa Desain Rp.60.000 untuk 1 Jam Jika lebih akan dikenakan charge
+                                Rp.60.000 per Jam yang akan dikonfirmasikan melalui whatsapp)
                             </label>
                         </div>
+                        <span class="form-text mb-2">
+                            *Pesanan yang anda buat tidak dapat diubah atau dibatalkan setelah anda melakukan pembayaran
+                        </span>
 
                         <input type="hidden" class="need_desain" name="need_desain" value="0" id="need_desain">
                     </div>
@@ -168,43 +172,43 @@
                         </div>
 
                         <!-- <div class="panel">
-                            <div class="panel-heading">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                                    class="plus">Informasi<span>&nbsp;</span>
-                                </a>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <table class="table shop_attributes">
-                                        <tbody>
-                                            <tr>
-                                                <th>Size:</th>
-                                                <td>EU 41 (US 8), EU 42 (US 9), EU 43 (US 10), EU 45 (US 12)</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Colors:</th>
-                                                <td>Violet, Black, Blue</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Fabric:</th>
-                                                <td>Cotton (100%)</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div> -->
+                                                        <div class="panel-heading">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                                                                class="plus">Informasi<span>&nbsp;</span>
+                                                            </a>
+                                                        </div>
+                                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                                            <div class="panel-body">
+                                                                <table class="table shop_attributes">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>Size:</th>
+                                                                            <td>EU 41 (US 8), EU 42 (US 9), EU 43 (US 10), EU 45 (US 12)</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Colors:</th>
+                                                                            <td>Violet, Black, Blue</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Fabric:</th>
+                                                                            <td>Cotton (100%)</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
                     </div>
 
                     <!-- <div class="socials-share clearfix">
-                        <span>Share:</span>
-                        <div class="social-icons nobase">
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-google"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div> -->
+                                                    <span>Share:</span>
+                                                    <div class="social-icons nobase">
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-google"></i></a>
+                                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div> -->
                 </div> <!-- end col product description -->
             </div> <!-- end row -->
 

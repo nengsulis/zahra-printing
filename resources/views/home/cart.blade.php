@@ -53,11 +53,9 @@
                                                     <li>Note: {{ $cart->note }}</li>
                                                     <li>Berat: {{ $cart->product->berat }}</li>
                                                 </ul>
-
                                             </td>
                                             <td class="product-price">
-                                                <span
-                                                    class="amount">{{ 'Rp. ' . number_format($cart->product->harga) }}</span>
+                                                <span class="amount">{{ 'Rp. ' . number_format($cart->product->harga) }}</span>
                                             </td>
                                             <td class="product-quantity">
                                                 <span class="amount">{{ $cart->jumlah }}</span>
@@ -66,8 +64,7 @@
                                                 <span class="amount">{{ 'Rp. ' . number_format($cart->total) }}</span>
                                             </td>
                                             <td class="product-remove">
-                                                <a href="/delete_from_cart/{{ $cart->id }}" class="remove"
-                                                    title="Remove this item">
+                                                <a href="/delete_from_cart/{{ $cart->id }}" class="remove" title="Remove this item">
                                                     <i class="ui-close"></i>
                                                 </a>
                                             </td>
@@ -83,13 +80,11 @@
                             <div class="col-md-7">
                                 <div class="actions">
                                     <div class="wc-proceed-to-checkout">
-                                        <a href="#" class="btn btn-lg btn-dark checkout"><span>proceed to
-                                                checkout</span></a>
+                                        <a href="#" class="btn btn-lg btn-dark checkout"><span>Proceed to Checkout</span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div> <!-- end col -->
                 </div> <!-- end row -->
 
@@ -124,15 +119,7 @@
                         <p class="form-row form-row-wide">
                             <label for="detail_alamat">Detail Alamat</label>
                             <textarea name="detail_alamat" id="detail_alamat" class="country_to_state detail_alamat" cols="30" rows="10"></textarea>
-
                         </p>
-
-
-                        {{-- <p>
-                            <a href="#" name="calc_shipping"
-                                class="btn btn-lg btn-stroke mt-10 mb-mdm-40 update-total" style="padding: 20px 40px">
-                                Update Totals</a>
-                        </p> --}}
                     </div> <!-- end col shipping calculator -->
 
                     <div class="col-md-6">
@@ -147,6 +134,15 @@
                                             <span class="amount cart-total">Rp. {{ number_format($cart_total) }}</span>
                                         </td>
                                     </tr>
+
+                                    <!-- Menambahkan baris PPN 12% -->
+                                    <tr class="ppn">
+                                        <th>PPN (12%)</th>
+                                        <td>
+                                            <span class="amount" id="ppn">Rp. {{ number_format($cart_total * 0.12) }}</span>
+                                        </td>
+                                    </tr>
+
                                     <tr class="shipping">
                                         <th>Shipping</th>
                                         <td>
@@ -157,18 +153,16 @@
                                         <th>Order Total</th>
                                         <td>
                                             <input type="hidden" name="grand_total" class="grand_total">
-                                            <strong><span class="amount grand_total">0</span></strong>
+                                            <strong><span class="amount grand_total">Rp. 0</span></strong>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
                     </div> <!-- end col cart totals -->
 
                 </div> <!-- end row -->
             </form>
-
         </div> <!-- end container -->
     </section> <!-- end cart -->
 @endsection
@@ -180,48 +174,49 @@
                 $.ajax({
                     url: '/get_kota/' + $(this).val(),
                     success: function(data) {
-                        data = JSON.parse(data)
-                        option = ""
+                        data = JSON.parse(data);
+                        option = "";
                         data.rajaongkir.results.map((kota) => {
-                            option +=
-                                `<option value=${kota.city_id}>${kota.city_name}</option>`
-                        })
-                        $('.kota').html(option)
+                            option += `<option value=${kota.city_id}>${kota.city_name}</option>`;
+                        });
+                        $('.kota').html(option);
                     }
                 });
             });
+
             // Fungsi untuk memformat angka menjadi Rupiah
             function formatRupiah(angka) {
                 let rupiah = angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                 return 'Rp ' + rupiah;
             }
+
             $('.kota').change(function(e) {
                 e.preventDefault();
 
-                // Memastikan kota dan berat memiliki nilai sebelum mengirim permintaan
                 if ($('.kota').val() && $('.berat').val()) {
                     $.ajax({
                         url: '/get_ongkir/' + $('.kota').val() + '/' + $('.berat').val(),
                         success: function(data) {
                             data = JSON.parse(data);
 
-                            // Menghitung grand total
-                            let ongkir = parseInt(data.rajaongkir.results[0].costs[1].cost[0]
-                                .value);
+                            // Menghitung ongkir, PPN, dan grand total
+                            let ongkir = parseInt(data.rajaongkir.results[0].costs[1].cost[0].value);
                             let cartTotal = {{ $cart_total }};
-                            let grandtotal = ongkir + cartTotal;
+                            let ppn = cartTotal * 0.12;  // Hitung PPN 12%
+                            let grandtotal = ongkir + cartTotal + ppn;
 
-                            // Memperbarui biaya pengiriman dan grand total di halaman
+                            // Memperbarui biaya pengiriman, PPN dan grand total di halaman
                             $('.shipping-cost').text(formatRupiah(ongkir));
+                            $('#ppn').text(formatRupiah(ppn));
                             $('.grand_total').text(formatRupiah(grandtotal));
-                            $('.grand_total').val(
-                                grandtotal); // Jika ada input hidden yang butuh grand total
+                            $('.grand_total').val(grandtotal); // Untuk input hidden
                         }
                     });
                 }
             });
+
             $('.checkout').click(function(e) {
-                e.preventDefault()
+                e.preventDefault();
                 $.ajax({
                     url: '/checkout_orders',
                     method: 'POST',
@@ -230,12 +225,10 @@
                         'X-CSRF-TOKEN': "{{ csrf_token() }}",
                     },
                     success: function() {
-
-                        location.href = '/checkout'
+                        location.href = '/checkout';
                     }
-                })
-            })
-
+                });
+            });
         });
     </script>
 @endpush

@@ -66,6 +66,7 @@ Route::get('/pesanan/selesai', [OrderController::class, 'selesai_list']);
 Route::post('/api/pesanan/upload_design', [OrderController::class, 'uploadDesign']);
 
 Route::get('/report', [ReportController::class, 'index']);
+Route::get('/report/product', [ReportController::class, 'rekap_product'])->name('report.product');
 
 Route::get('/tentang', [TentangController::class, 'index']);
 Route::post('/tentang/{about}', [TentangController::class, 'update']);
@@ -95,4 +96,3 @@ Route::post('/payments', [HomeController::class, 'payments']);
 Route::post('/bayar', [HomeController::class, 'bayar']);
 Route::post('/payment_charge', [HomeController::class, 'payment_charge']);
 Route::post('/pesanan_selesai/{order}', [HomeController::class, 'pesanan_selesai']);
-

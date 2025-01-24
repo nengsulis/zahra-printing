@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Models\Order;
+use App\Models\OrderDetail;
 use App\Models\Payment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -93,5 +94,58 @@ class ReportController extends Controller
     public function index()
     {
         return view('report.index');
+    }
+
+    public function fetchReports(Request $request)
+    {
+        $dari = $request->input('dari', Carbon::now()->startOfMonth()->format('Y-m-d'));
+        $sampai = $request->input('sampai', Carbon::now()->endOfMonth()->format('Y-m-d'));
+
+        $reports = OrderDetail::filterDate($dari, $sampai)
+            ->selectRaw('product_name, price, SUM(qty) as qty, SUM(price * qty) as total')
+            ->groupBy('product_name', 'price')
+            ->get();
+
+        return response()->json([
+            'data' => $reports
+        ]);
+    }
+
+    public function getReportData(Request $request)
+    {
+        $dari = $request->input('dari');
+        $sampai = $request->input('sampai');
+
+        // Menyiapkan query untuk OrderDetail
+        $query = OrderDetail::with('product');
+
+        // Menambahkan filter tanggal jika ada input dari dan sampai
+        if ($dari && $sampai) {
+            $query->filterDate($dari, $sampai);
+        }
+
+        // Menambahkan join dengan tabel products untuk mendapatkan harga produk
+        $data = $query->join('products', 'order_details.id_produk', '=', 'products.id')
+            ->selectRaw('products.nama_produk, products.harga, SUM(order_details.jumlah) as total_qty, SUM(products.harga * order_details.jumlah) as total_revenue')
+            ->groupBy('products.id', 'products.harga', 'products.nama_produk') // Menyesuaikan dengan kolom yang digunakan
+            ->orderByDesc('total_qty')
+            ->get()
+            ->map(function ($item) {
+                return [
+                    'nama_produk' => $item->nama_produk ?? 'Unknown', // Nama produk dari tabel products
+                    'harga' => $item->harga ?? 0, // Pastikan harga tidak null
+                    'qty' => $item->total_qty ?? 0, // Pastikan qty tidak null
+                    'total' => $item->total_revenue ?? 0, // Pastikan total revenue tidak null
+                ];
+            });
+
+        return response()->json(['data' => $data]);
+    }
+
+
+
+    public function rekap_product()
+    {
+        return view('report.product');
     }
 }

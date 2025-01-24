@@ -5,7 +5,7 @@
     <section class="hero-wrap text-center relative">
         <div id="owl-hero" class="owl-carousel owl-theme light-arrows slider-animated">
             @foreach ($sliders as $slider)
-                <div class="hero-slide overlay" style="background-image:url(/uploads/{{ $slider->gambar }}">
+                <div class="hero-slide overlay" style="background-image:url(/uploads/{{ $slider->gambar }})">
                     <div class="container">
                         <div class="hero-holder">
                             <div class="hero-message">
@@ -21,24 +21,24 @@
 
     <!-- Promo Banners -->
     <!-- <section class="section-wrap promo-banners pb-30">
-        <div class="container">
-            <div class="row">
+                                    <div class="container">
+                                        <div class="row">
 
-                @foreach ($categories as $category)
-                    <div class="col-xs-4 col-xxs-12 mb-30 promo-banner">
-                        <a href="/front/#">
-                            <img src="/uploads/{{ $category->gambar }}" alt="">
-                            <div class="overlay"></div>
-                            <div class="promo-inner valign">
-                                <h2>{{ $category->nama_kategori }}</h2>
-                                <span>{{ $category->deskripsi }}</span>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section> end promo banners -->
+                                            @foreach ($categories as $category)
+    <div class="col-xs-4 col-xxs-12 mb-30 promo-banner">
+                                                    <a href="/front/#">
+                                                        <img src="/uploads/{{ $category->gambar }}" alt="">
+                                                        <div class="overlay"></div>
+                                                        <div class="promo-inner valign">
+                                                            <h2>{{ $category->nama_kategori }}</h2>
+                                                            <span>{{ $category->deskripsi }}</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+    @endforeach
+                                        </div>
+                                    </div>
+                                </section> end promo banners -->
 
 
 
@@ -49,7 +49,8 @@
 
             <div class="row heading-row">
                 <div class="col-md-12 text-center">
-                    <h2 class="heading bottom-line" style="margin-top: 40px; margin-bottom: 30px; font-size: 32px; font-weight: 600; letter-spacing: 2px;">
+                    <h2 class="heading bottom-line"
+                        style="margin-top: 40px; margin-bottom: 30px; font-size: 32px; font-weight: 600; letter-spacing: 2px;">
                         Product Design
                     </h2>
                     <i class="fa fa-star" style="font-size: 24px; color: #f39c12; margin-right: 5px;"></i>
@@ -115,4 +116,28 @@
         </div>
 
       </section> <!-- end testimonials --> --}}
+    <section class="section-wrap relative testimonials bg-parallax overlay"
+        style="background-image:url(/front/img/testimonials/testimonial_bg.jpg);">
+        <div class="container relative">
+
+            <div class="row heading-row mb-20">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2 class="heading white bottom-line">JASA DESAIN 60K/DESAIN</h2>
+                </div>
+            </div>
+
+            <div id="owl-testimonials" class="owl-carousel owl-theme text-center">
+
+                <div class="item">
+                    <div class="testimonial">
+                        <p class="testimonial-text">(JIKA LEBIH DARI 1 JAM AKAN DIKENAKAN
+                            CHARGE 60K/JAM)</p>
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
 @endsection
