@@ -158,7 +158,30 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $detail->product->nama_produk ?? 'Nama produk tidak tersedia' }}
                                     </td>
-                                    <td>{{ $detail->size ?? 'Size tidak tersedia' }}</td>
+                                    <td>
+                                        @php
+                                            $size = $detail->size;
+                                            // Cek apakah $size berisi angka atau operasi matematika yang valid
+                                            $calculatedSize = '';
+
+                                            // Cek jika $size adalah angka murni
+                                            if (is_numeric($size)) {
+                                                $calculatedSize = $size;
+                                            }
+                                            // Cek apakah $size berisi ekspresi matematika yang valid
+                                            elseif (preg_match('/^[\d\+\-\*\/\(\)\. ]+$/', $size)) {
+                                                // Jika valid, lakukan perhitungan
+                                                $calculatedSize = eval('return ' . $size . ';');
+                                            } else {
+                                                // Jika tidak ada operasi matematika, tampilkan saja stringnya
+                                                $calculatedSize = $size;
+                                            }
+                                        @endphp
+
+                                        {{ $calculatedSize ?? 'Size tidak tersedia' }}
+                                    </td>
+
+
                                     <td>{{ $detail->is_need_design == 1 ? 'Request Desain' : 'Desain sudah tersedia' }}
                                     </td>
                                     <td>
